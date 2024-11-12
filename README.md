@@ -1,8 +1,7 @@
-# 🚀 Finance Tracker
+# 🚀 ReactiveInvestor - Finance Tracker
 ## A slick React + .NET Core project to keep tabs on the stock market, securities, and cryptocurrencies in real-time using Financial Modeling Prep API. Build and manage your portfolio with mathematical precision and forecasting. All user interactions and portfolios are securely stored in an SQLEXPRESS database with encrypted connections. Frontend crafted with TypeScript and React (TSX), styled using Tailwind CSS; backend powered by .NET Core C#.
 
 ### 🛠 Tech Stack
-Frontend:
 - React (TypeScript)
 - Tailwind CSS
 Backend:
@@ -25,18 +24,8 @@ APIs:
 ### 🔧 Installation
 Clone the repo:
 bash
-git clone https://github.com/yourusername/finance-tracker.git
-Install frontend dependencies:
-cd frontend
-npm install
-# or
-yarn install
-Install backend dependencies:
-bash
-cd ../backend
-dotnet restore
+`git clone https://github.com/yourusername/finance-tracker.git`
 ### ⚙️ Configuration
-Frontend:
 - Create a .env file in the frontend directory.
 - Add your API keys and necessary environment variables.
 - REACT_APP_API_BASE_URL=http://localhost:5000/api
@@ -52,11 +41,8 @@ Backend:
   }
 }
 ### 🏃 Running the App
-npm start
-# or
-yarn start
+npm start or yarn start
 The frontend should now be running at http://localhost:3000 and the backend API at http://localhost:5000.
-
 ### 🛡 Security
 All API calls and database connections are secured using industry-standard encryption protocols.
 Sensitive data like API keys and database passwords are stored in environment variables and configuration files not checked into source control.
