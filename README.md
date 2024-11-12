@@ -25,6 +25,7 @@ APIs:
 Clone the repo:
 bash
 `git clone https://github.com/yourusername/finance-tracker.git`
+register and receive your unique token on the website:`https://site.financialmodelingprep.com/`
 ### ⚙️ Configuration
 - Create a .env file in the frontend directory.
 - Add your API keys and necessary environment variables.
