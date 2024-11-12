@@ -30,18 +30,17 @@ APIs:
 - Add your API keys and necessary environment variables.
 - REACT_APP_API_BASE_URL=http://localhost:5000/api
 - REACT_APP_FINANCIAL_MODELING_PREP_API_KEY=your_api_key_here
-Backend:
 - Update appsettings.json with your database connection string and other settings.
-{
+`{
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Database=FinanceTracker;Trusted_Connection=True;"
   },
   "ApiKeys": {
     "FinancialModelingPrep": "your_api_key_here"
   }
-}
+}`
 ### 🏃 Running the App
-npm start or yarn start
+`npm start` or `yarn start`
 The frontend should now be running at http://localhost:3000 and the backend API at http://localhost:5000.
 ### 🛡 Security
 All API calls and database connections are secured using industry-standard encryption protocols.
