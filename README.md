@@ -1,6 +1,8 @@
 # ReactiveInvestor - Finance Tracker
  A slick React + .NET Core project to keep tabs on the stock market, securities, and cryptocurrencies in real-time using Financial Modeling Prep API. Build and manage your portfolio with mathematical precision and forecasting. All user interactions and portfolios are securely stored in an SQLEXPRESS database with encrypted connections. Frontend crafted with TypeScript and React (TSX), styled using Tailwind CSS; backend powered by .NET Core C#.
 
+
+
 ### Tech Stack
 - React (TypeScript)
 - Tailwind CSS
