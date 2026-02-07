@@ -1,49 +1,165 @@
-# ReactiveInvestor - Finance Tracker
- A slick React + .NET Core project to keep tabs on the stock market, securities, and cryptocurrencies in real-time using Financial Modeling Prep API. Build and manage your portfolio with mathematical precision and forecasting. All user interactions and portfolios are securely stored in an SQLEXPRESS database with encrypted connections. Frontend crafted with TypeScript and React (TSX), styled using Tailwind CSS; backend powered by .NET Core C#.
+# ReactiveInvestor — Real-Time Stock Market Simulator
 
-### Tech Stack
-- React (TypeScript)
-- Tailwind CSS
-Backend:
-- .NET Core (C#)
-Database:
-- SQLEXPRESS
-APIs:
-- Financial Modeling Prep API
-### Features
-- Real-Time Market Tracking: Keep up with live updates on stocks, securities, and crypto.
-- Portfolio Management: Calculate and assemble your custom portfolio using advanced math and forecasting algorithms.
-- User Operations Logging: All user interactions are recorded and stored securely.
-- Secure Connections: All data transmissions are encrypted for maximum security.
-### Getting Started
-- Prerequisites
-- Node.js (v14 or later)
-- .NET Core SDK (v5.0 or later)
-- SQLEXPRESS installed and configured
-- npm or yarn
-### Installation
-- Clone the repo:
-`git clone https://github.com/yourusername/finance-tracker.git`
-- Register and receive your unique token on the website:`https://site.financialmodelingprep.com/`
-### Configuration
-- Create a .env file in the frontend directory.
-- Add your API keys and necessary environment variables.
-- REACT_APP_API_BASE_URL=http://localhost:5000/api
-- REACT_APP_FINANCIAL_MODELING_PREP_API_KEY=your_api_key_here
-- Update appsettings.json with your database connection string and other settings.
-`{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=FinanceTracker;Trusted_Connection=True;"
-  },
-  "ApiKeys": {
-    "FinancialModelingPrep": "your_api_key_here"
-  }
-}`
-### Running the App
-`npm start` or `yarn start`
-The frontend should now be running at http://localhost:3000 and the backend API at http://localhost:5000.
-### Security
-All API calls and database connections are secured using industry-standard encryption protocols.
-Sensitive data like API keys and database passwords are stored in environment variables and configuration files not checked into source control.
-### License
-This project is licensed under the MIT License - see the LICENSE file for details.
+**ReactiveInvestor** is a full-stack, event-driven stock market simulation platform built with a modern **.NET backend** and a **React + TypeScript frontend**.
+
+The project demonstrates how to design and implement a **real-time financial system**: from market data simulation and portfolio management to live UI updates and analytical dashboards.
+
+This repository focuses on **system design, backend reliability, and frontend reactivity**, rather than visual polish alone.
+
+---
+
+## What This Project Demonstrates
+
+ReactiveInvestor is not just a UI demo.
+
+It showcases how to:
+- design a financial domain (stocks, portfolios, transactions)
+- build deterministic and testable backend logic
+- stream real-time updates to the client
+- keep frontend state synchronized with backend events
+- structure a full-stack project for production growth
+
+The same architecture can be applied to:
+- trading simulators
+- fintech dashboards
+- portfolio analytics systems
+- real-time monitoring platforms
+
+---
+
+## Key Features
+
+- Stock market simulation with dynamic price changes
+- Portfolio and asset management
+- Real-time updates of prices and positions
+- Event-driven backend architecture
+- Reactive frontend with live state updates
+- Clear separation of domain, application, and infrastructure layers
+
+---
+
+## High-Level Architecture
+
+```mermaid
+flowchart LR
+    Client[React UI]
+    Client --> API[ASP.NET Core API]
+    API --> Market[Market Simulator]
+    API --> Portfolio[Portfolio & Transactions]
+    API --> DB[(Database)]
+    API --> Client
+```
+
+**Core idea:** backend owns the source of truth, frontend reacts to state changes.
+
+---
+
+## Backend Overview (.NET)
+
+The backend is built as a cleanly layered ASP.NET Core application.
+
+### Responsibilities
+- Market price simulation
+- Portfolio calculations
+- Transaction processing
+- Data persistence
+- API orchestration
+
+### Structure
+
+```
+api/
+  Controllers/    HTTP endpoints
+  Models/         Domain models
+  Dtos/           API contracts
+  Repository/     Data access layer
+  Service/        Business logic
+  Data/           Database context & migrations
+```
+
+The backend emphasizes:
+- explicit domain logic
+- testability
+- clear data flow
+- separation of concerns
+
+---
+
+## Frontend Overview (React)
+
+The frontend is a reactive dashboard built with modern web tooling.
+
+### Responsibilities
+- Display live market data
+- Render portfolio state
+- React to backend updates
+- Provide user interaction layer
+
+### Tech Highlights
+- Component-based architecture
+- Typed state management
+- API-driven UI updates
+- Tailwind-based styling
+
+---
+
+## Technology Stack
+
+### Backend
+- **C# / .NET**
+- **ASP.NET Core**
+- **Entity Framework Core**
+- **REST API**
+- **LINQ**
+
+### Frontend
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Vite / Node.js**
+
+### Architecture & Tooling
+- Event-driven design
+- Client–server separation
+- DTO-based API contracts
+- Modular project structure
+
+---
+
+## Running the Project Locally
+
+### Backend
+```bash
+cd api
+dotnet restore
+dotnet run
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## Design Principles
+
+- Backend as single source of truth
+- Deterministic business logic
+- Explicit data contracts
+- Reactive UI updates
+- Scalability-ready architecture
+
+---
+
+## Final Notes
+
+ReactiveInvestor is designed as a **full-stack engineering case**, not a trading bot or real-market tool.
+
+The focus is on:
+- financial domain modeling
+- real-time system behavior
+- clean separation of responsibilities
+- production-oriented project structure
